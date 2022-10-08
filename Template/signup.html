@@ -1,0 +1,84 @@
+<div style="text-align:center">
+<style>
+    h1{
+        color: black;
+    }
+    h5{
+        color: red;
+    }
+        input[type=text], select {
+        width: 40%;
+        padding: 15px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        }
+        input[type=password], select {
+            width: 40%;
+            padding: 15px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            }
+
+    input[type=email], select {
+        width: 40%;
+        padding: 15px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        }
+        input[type=password2], select {
+            width: 40%;
+            padding: 15px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            }
+    
+        input[type=submit] {
+        width: 40%;
+        background-color: grey;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+
+    h3{
+        color: black;
+    }
+    
+
+</style>
+<h1> SIGNUP FORM</h1>
+ 
+{% for message in messages %}
+<h5>
+    {{message}}
+</h5>
+{% endfor %}
+
+<form method="POST" action="signup">
+    {% csrf_token %}
+    <h3>Username</h3>
+    <input type="text" name="username">
+    <h3>Email</h3>
+    <input type="email" name="email">
+    <h3>Password</h3>
+    <input type="password" name="password">
+    <h3>Password2</h3>
+    <input type="password" name="password2"><br>
+    <input type="submit">
+</form>
+</div>
